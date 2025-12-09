@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{longtable}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{4cm}
+{\Huge \textbf{Software Design Document}}\\[1cm]
+{\Large Career Help Platform}\\[0.5cm]
+{\large Version 1.0}\\[2cm]
+\vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section*{Version Description}
+\addcontentsline{toc}{section}{Version Description}
+
+\begin{longtable}{|c|c|c|}
+\hline
+Version & Description & Date \\ \hline
+1.0 & Initial SDD for Snapshot 1 & 12-08-2025 \\ \hline
+\end{longtable}
+
+\section{Introduction}
+The SDD outlines the system architecture and design for the Career Help Platform.
+
+\subsection{Purpose}
+To guide future developers and testers in understanding the system structure.
+
+\subsection{Intended Audience}
+Developers, instructors, testers, and stakeholders.
+
+\section{System Architecture}
+The architecture consists of:
+\begin{itemize}
+    \item A frontend user interface.
+    \item A backend recommendation engine.
+    \item A structured data layer storing career resources.
+\end{itemize}
+
+Workflow:
+\begin{enumerate}
+    \item User selects a career.
+    \item Backend retrieves associated education, certificates, internships, jobs.
+    \item Recommendations appear on the UI.
+\end{enumerate}
+
+\section{User Interface}
+\begin{itemize}
+    \item Simple layout with career selection and results panel.
+    \item User-friendly and accessible.
+\end{itemize}
+
+\section{Glossary}
+\begin{longtable}{|c|p{10cm}|}
+\hline
+Term & Definition \\ \hline
+Career Path & A structured journey toward a target profession. \\ \hline
+Recommendation Engine & Component that returns resources associated with a selected career. \\ \hline
+\end{longtable}
+
+\end{document}

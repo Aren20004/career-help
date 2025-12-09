@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{longtable}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{4cm}
+{\Huge \textbf{Software Requirements Specification}}\\[1cm]
+{\Large Career Help Platform}\\[0.5cm]
+{\large Version 1.0}\\[2cm]
+\vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section*{Version Description}
+\addcontentsline{toc}{section}{Version Description}
+
+\begin{longtable}{|c|c|c|}
+\hline
+\textbf{Version} & \textbf{Description} & \textbf{Date} \\ \hline
+1.0 & Initial version for Snapshot 1 & 12-08-2025 \\ \hline
+\end{longtable}
+
+\section{Introduction}
+\subsection{Purpose}
+This Software Requirements Specification (SRS) defines the functional and non-functional requirements for the Career Help Platform. The system provides users with career pathways including educational resources, certifications, internships, and job recommendations.
+
+\subsection{Intended Audience}
+\begin{itemize}
+    \item Developers planning future implementation.
+    \item Testers evaluating system requirements.
+    \item Students, advisors, and project stakeholders.
+\end{itemize}
+
+\subsection{Overview}
+The system will guide users through selecting a career and receiving a personalized roadmap. Future versions will include optional paid counseling.
+
+\section{External Interface Requirements}
+\subsection{User Interface}
+\begin{itemize}
+    \item Career selection dropdown.
+    \item Results section displaying required education, certifications, experience, and jobs.
+    \item Clean, web-based UI.
+\end{itemize}
+
+\subsection{Software Interface}
+\begin{itemize}
+    \item Backend recommendation engine (planned).
+    \item Data storage using structured JSON or database.
+\end{itemize}
+
+\section{Legal and Ethical Considerations}
+\begin{itemize}
+    \item User preferences are not to be stored without consent.
+    \item Recommendations must avoid bias or discrimination.
+    \item Paid counseling information must be disclosed transparently.
+\end{itemize}
+
+\end{document}

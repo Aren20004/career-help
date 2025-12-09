@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Career Help Platform Design Specification}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+This document provides a detailed design specification of the Career Help Platform. 
+It breaks down every major component of the system, including pages, modules, tools, and required dependencies.
+
+\section{Page Breakdown}
+\subsection{Home Page}
+Displays introduction and allows user to begin selecting a career path.
+
+\subsection{Career Selection Page}
+Contains a dropdown list of careers and a button to generate recommendations.
+
+\subsection{Recommendations Page}
+Displays colleges, certificates, internships, jobs, and experience required for the chosen career.
+
+\section{Component Breakdown}
+\begin{itemize}
+    \item \textbf{Career Selector Module:} Accepts user input.
+    \item \textbf{Recommendation Engine:} Retrieves data based on the career.
+    \item \textbf{Data Layer:} Stored as JSON or database.
+    \item \textbf{Counseling Module (future):} Handles paid 1-on-1 sessions.
+\end{itemize}
+
+\section{Dependencies and Libraries}
+Planned dependencies:
+\begin{itemize}
+    \item Python Flask (backend)
+    \item HTML/CSS/JavaScript (frontend)
+    \item JSON data storage
+\end{itemize}
+
+\section{Docker Requirements}
+\begin{itemize}
+    \item Python 3.10 base image
+    \item Copy project files into container
+    \item Expose port 5000
+\end{itemize}
+
+\end{document}
