@@ -119,4 +119,31 @@ To support this feature, the design assumes the following additional dependencie
 \end{itemize}
 
 
+
+\section{Snapshot 3 Design Additions}
+
+\subsection{Internship Opportunities and Guidance Module}
+This module enables internship discovery and tailored application support.
+
+\subsubsection{Responsibilities}
+\begin{itemize}
+\item Accept student internship preferences.
+\item Match criteria to internship opportunities (mock data or future API).
+\item Produce application guidance (resume, networking, timelines).
+\end{itemize}
+
+\subsection{Updated Architecture Overview}
+\begin{itemize}
+\item Chat UI extended to support internship queries.
+\item Intent router directs internship queries to new module.
+\item Internship Service fetches matches and generates guidance.
+\end{itemize}
+
+\subsection{Workflow Extension}
+\begin{enumerate}
+\item Student requests internship info.
+\item Query routed to internship module.
+\item Module returns internship results + guidance.
+\end{enumerate}
+
 \end{document}
