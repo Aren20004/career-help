@@ -65,4 +65,58 @@ Career Path & A structured journey toward a target profession. \\ \hline
 Recommendation Engine & Component that returns resources associated with a selected career. \\ \hline
 \end{longtable}
 
+
+\section{Snapshot 2 Design Additions}
+
+\subsection{AI Career Roadmap Generator Component}
+The Snapshot 2 milestone adds the AI Career Roadmap Generator as a core backend component of the Career Help Platform. 
+This component is responsible for turning structured student input into a multi-phase roadmap that outlines recommended classes, 
+skills, projects, and internship milestones.
+
+\subsubsection{Responsibilities}
+\begin{itemize}
+    \item Accept student information such as major, interests, experience, and target career.
+    \item Construct prompts or structured requests for the AI model or rule-based engine.
+    \item Post-process AI output into a structured format (for example, phases or years).
+    \item Return the roadmap to the chatbot interface for display to the student.
+\end{itemize}
+
+\subsubsection{Interfaces}
+\begin{itemize}
+    \item Exposes a backend endpoint (for example, \texttt{/career-roadmap}) that receives JSON input.
+    \item Communicates with an AI provider or local model using an SDK or HTTP API.
+    \item Returns a JSON structure that can be rendered by the frontend chat interface.
+\end{itemize}
+
+\subsection{Updated Architecture Overview}
+The high-level architecture is updated to include the AI Career Roadmap Generator as part of the backend recommendation engine. 
+
+\begin{itemize}
+    \item \textbf{Chat UI / Frontend}: Provides a text-based interface where students can ask questions and request a career roadmap.
+    \item \textbf{Chatbot Orchestrator}: Parses user intent (for example, ``create a career roadmap for a CS major''), validates inputs, and routes the request.
+    \item \textbf{Career Roadmap Service}: New module that builds prompts, calls the AI model, and formats route responses.
+    \item \textbf{Data Layer}: Optionally enriches responses with static data (for example, predefined skills or example courses).
+\end{itemize}
+
+\subsection{Updated Workflow}
+The workflow is expanded to show how a roadmap request flows through the system:
+
+\begin{enumerate}
+    \item The student opens the chatbot interface and types a request such as ``Create a roadmap for a Computer Science major who wants to become a software engineer.''
+    \item The frontend sends the request to the backend along with any structured form inputs (major, interests, experience, goal).
+    \item The backend chatbot orchestrator analyzes the request and calls the Career Roadmap Service.
+    \item The Career Roadmap Service generates a prompt and invokes the AI model or rule-based logic.
+    \item The AI response is parsed into sections (for example, Year 1--4 or phases) and wrapped in a structured response object.
+    \item The formatted roadmap is returned to the frontend and displayed to the student inside the chat.
+\end{enumerate}
+
+\subsection{New Dependencies}
+To support this feature, the design assumes the following additional dependencies will be included in the implementation:
+
+\begin{itemize}
+    \item AI model SDK or HTTP client library to communicate with a large language model.
+    \item Configuration management (for example, environment variables) for securely storing API keys.
+\end{itemize}
+
+
 \end{document}

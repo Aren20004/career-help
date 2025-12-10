@@ -36,4 +36,123 @@ The system architecture, goals, and initial design decisions are defined here.
     A high-level depiction showing user input flowing through the UI, backend recommendation logic, data retrieval, and final results displayed to the user.
 \end{itemize}
 
+
+\section*{Snapshot 2 --- First Checkpoint Objectives}
+
+\subsection*{Reflection on Snapshot 1}
+Snapshot 1 focused on setting up the foundation of the Career Help Platform. 
+The team created the initial versions of the SRS, SDD, User Manual, and Design Specification, 
+and defined the overall problem space: helping students explore careers and understand the paths required to reach them. 
+At this stage, the chatbot, AI logic, and dynamic roadmap generation were still in the planning phase.
+
+\subsection*{New Objective: AI-Powered Career Roadmap Generator for Students}
+Snapshot 2 introduces the first major functional feature of the system: an AI-powered career roadmap generator 
+targeted specifically at students. The feature will provide structured multi-step guidance to help students move from 
+their current academic status toward their desired career.
+
+\subsection*{Goals for Snapshot 2}
+\begin{itemize}
+    \item Implement a new backend service that accepts student inputs such as major, interests, experience level, and target career goal.
+    \item Integrate an AI model or external API capable of generating a multi-year roadmap with clear milestones.
+    \item Extend the chatbot interface so students can request a ``career roadmap'' using natural language.
+    \item Include recommendations for relevant classes, internships, projects, and skills that support the student\'s target career.
+    \item Ensure responses are formatted in phases (for example, Year 1--4 or Semester 1--8) to help students plan over time.
+    \item Lay the groundwork for future extensions such as class schedule lookup and internship search integration.
+\end{itemize}
+
+\subsection*{Deliverables for Snapshot 2}
+\begin{itemize}
+    \item Updated SRS, SDD, User Manual, and Design Specification including the career roadmap generator feature.
+    \item Updated workflow diagram showing the new AI roadmap component integrated with the chatbot.
+    \item Backend endpoint stubbed or implemented for generating roadmaps.
+    \item Basic test cases documented in TestRail for roadmap requests, validation, and error handling.
+\end{itemize}
+
+
+
+\section*{Jira Tasks for Snapshot 2}
+
+For Snapshot 2, the Jira board is updated with an epic and related stories focused on the AI Career Roadmap Generator. 
+Below is a high-level summary of the planned work items that appear in Jira.
+
+\subsection*{Epic: AI Career Roadmap Generator}
+\textbf{Goal:} Enable students to request a personalized multi-phase career roadmap through the chatbot interface.
+
+\subsection*{User Stories and Tasks}
+\begin{itemize}
+    \item \textbf{Story 1: Collect Student Career Input}
+    \begin{itemize}
+        \item Define the input fields for roadmap generation (major, interests, experience level, career goal).
+        \item Update the frontend to prompt the user for missing information.
+        \item Validate request data on the backend.
+        \item Document the input schema in the API specification.
+    \end{itemize}
+
+    \item \textbf{Story 2: Develop Roadmap Generation Engine}
+    \begin{itemize}
+        \item Create a prompt template for generating roadmaps with an AI model.
+        \item Implement a placeholder function or service to call the AI or rule-based engine.
+        \item Parse and format the AI output into phases (for example, Year 1--4).
+        \item Add basic tests for the roadmap formatting logic.
+    \end{itemize}
+
+    \item \textbf{Story 3: Chatbot Integration}
+    \begin{itemize}
+        \item Add a ``roadmap'' intent to the chatbot workflow.
+        \item Ensure the chatbot can ask follow-up questions when information is missing.
+        \item Display roadmap results as clearly separated sections in the chat UI.
+    \end{itemize}
+
+    \item \textbf{Story 4: Documentation Updates}
+    \begin{itemize}
+        \item Update the SDD with the Career Roadmap Service component.
+        \item Update the SRS with new functional and non-functional requirements.
+        \item Update the User Manual and Design Specification to describe how students use the feature.
+    \end{itemize}
+
+    \item \textbf{Story 5: Workflow Diagram Update}
+    \begin{itemize}
+        \item Extend the high-level workflow diagram to include the roadmap request, AI processing, and response.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Potential Bug Tickets}
+The following potential bugs are also created in Jira for future testing and tracking:
+\begin{itemize}
+    \item BUG-01: Chatbot does not ask for missing student information before generating a roadmap.
+    \item BUG-02: Roadmap text is returned as one long paragraph instead of organized sections.
+    \item BUG-03: Invalid or empty input causes an unhandled error on the backend.
+    \item BUG-04: AI service timeout or failure is not communicated clearly to the user.
+\end{itemize}
+
+\section*{TestRail Snapshot 2 Test Plan Summary}
+
+For Snapshot 2, a TestRail test run is created to validate the basic behavior of the AI Career Roadmap Generator.
+
+\subsection*{Key Test Cases}
+\begin{itemize}
+    \item \textbf{TC-CR1: Roadmap Request with Complete Information} \\
+    \textit{Steps:} The student provides a major and career goal and requests a roadmap. \\
+    \textit{Expected Result:} A structured multi-phase roadmap is displayed in the chat.
+
+    \item \textbf{TC-CR2: Handling Missing Inputs} \\
+    \textit{Steps:} The student requests a roadmap without specifying a major. \\
+    \textit{Expected Result:} The chatbot asks a follow-up question to gather the missing major before generating the roadmap.
+
+    \item \textbf{TC-CR3: Invalid Input Text} \\
+    \textit{Steps:} The student enters nonsensical text that cannot be mapped to a career goal. \\
+    \textit{Expected Result:} The system responds with a clarification prompt asking the student to restate their major or target role.
+
+    \item \textbf{TC-CR4: AI Service Timeout} \\
+    \textit{Steps:} A roadmap request is made while the AI service is unavailable or slow. \\
+    \textit{Expected Result:} The system returns a friendly error message explaining that the roadmap service is temporarily unavailable.
+
+    \item \textbf{TC-CR5: Response Formatting} \\
+    \textit{Steps:} A standard roadmap request is executed. \\
+    \textit{Expected Result:} The roadmap is organized into headings or bullet lists so that the guidance is easy to read.
+\end{itemize}
+
+These Jira and TestRail summaries document the planning and quality assurance activities attached to Snapshot 2 and can be expanded in future snapshots as the implementation matures.
+
+
 \end{document}

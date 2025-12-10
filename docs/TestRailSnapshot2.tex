@@ -1,0 +1,79 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{TestRail Snapshot 2 Report}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Overview}
+This document summarizes the TestRail test run associated with Snapshot 2 of the Career Help Platform. 
+The primary focus of this test run is the AI Career Roadmap Generator feature, which allows students to request 
+a personalized multi-phase roadmap for reaching their target careers.
+
+\section*{Test Run Details}
+\begin{itemize}
+    \item \textbf{Feature Under Test:} AI Career Roadmap Generator
+    \item \textbf{Scope:} Basic functionality, input handling, error handling, and response formatting.
+    \item \textbf{Tester(s):} Project team members.
+\end{itemize}
+
+\section*{Test Cases}
+
+\subsection*{TC-CR1: Roadmap Request with Complete Information}
+\begin{itemize}
+    \item \textbf{Precondition:} The TestRail run is configured and the application is accessible.
+    \item \textbf{Steps:}
+    \begin{enumerate}
+        \item Log into the Career Help Platform.
+        \item Open the chatbot interface.
+        \item Enter a request such as ``Create a roadmap for a Computer Science student who wants to become a software engineer.''
+    \end{enumerate}
+    \item \textbf{Expected Result:} A clear, multi-phase roadmap is generated and displayed to the user.
+\end{itemize}
+
+\subsection*{TC-CR2: Handling Missing Inputs}
+\begin{itemize}
+    \item \textbf{Steps:}
+    \begin{enumerate}
+        \item Open the chatbot interface.
+        \item Enter a request such as ``Help me plan my career'' without specifying a major.
+    \end{enumerate}
+    \item \textbf{Expected Result:} The chatbot prompts the user to provide their major and any other required information before generating a roadmap.
+\end{itemize}
+
+\subsection*{TC-CR3: Invalid Input Text}
+\begin{itemize}
+    \item \textbf{Steps:}
+    \begin{enumerate}
+        \item Enter nonsensical or random characters as the request.
+    \end{enumerate}
+    \item \textbf{Expected Result:} The chatbot indicates that it could not understand the request and asks the user to clarify their goal.
+\end{itemize}
+
+\subsection*{TC-CR4: AI Service Timeout or Failure}
+\begin{itemize}
+    \item \textbf{Steps:}
+    \begin{enumerate}
+        \item Trigger a roadmap request while the AI backend is unavailable (simulated in a test environment if necessary).
+    \end{enumerate}
+    \item \textbf{Expected Result:} The system returns a friendly error message explaining that the roadmap service is temporarily unavailable and suggests trying again later.
+\end{itemize}
+
+\subsection*{TC-CR5: Response Formatting Quality}
+\begin{itemize}
+    \item \textbf{Steps:}
+    \begin{enumerate}
+        \item Submit a standard roadmap request.
+    \end{enumerate}
+    \item \textbf{Expected Result:} The roadmap is organized into headings or bullet points (for example, ``Year 1'', ``Year 2'') so that guidance is easy to read.
+\end{itemize}
+
+\section*{Conclusion}
+The Snapshot 2 TestRail run provides baseline coverage for the new AI Career Roadmap Generator feature. 
+Additional test cases and more detailed execution results can be added in future snapshots as the implementation is refined.
+
+\end{document}

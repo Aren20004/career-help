@@ -62,4 +62,40 @@ The system will guide users through selecting a career and receiving a personali
     \item Paid counseling information must be disclosed transparently.
 \end{itemize}
 
+
+\section{Snapshot 2 Functional Requirements}
+
+\subsection{New Functional Requirements for Career Roadmap Generation}
+
+\begin{itemize}
+    \item \textbf{FR-CR1: Collect Student Inputs} \\
+    The system shall allow a student to provide their major or program, areas of interest, current academic standing, and target career goal.
+
+    \item \textbf{FR-CR2: Generate Multi-Phase Roadmap} \\
+    The system shall generate a multi-phase roadmap that includes suggested academic steps, skills to build, project ideas, and internship milestones relevant to the student\'s goal.
+
+    \item \textbf{FR-CR3: Chat-Based Interaction} \\
+    The system shall allow the student to request a career roadmap through a chat-style interface using natural language queries.
+
+    \item \textbf{FR-CR4: Output Formatting} \\
+    The roadmap shall be returned in a readable format, broken into clear phases such as Year 1--4 or equivalent terms, and presented in the chatbot output.
+
+    \item \textbf{FR-CR5: Handling Missing Information} \\
+    If the student does not provide enough information (for example, no major or goal), the system shall ask follow-up questions before generating a roadmap.
+\end{itemize}
+
+\subsection{Updated Non-Functional Requirements}
+
+\begin{itemize}
+    \item \textbf{NFR-CR1: Response Time} \\
+    Under normal load, a roadmap request should complete in 10 seconds or less, assuming the external AI service is available.
+
+    \item \textbf{NFR-CR2: Clarity of Guidance} \\
+    The roadmap must be presented in a clear, organized way that is understandable to students with no prior experience in career planning.
+
+    \item \textbf{NFR-CR3: Privacy and Ethics} \\
+    Student inputs used to generate the roadmap must not be stored permanently without consent and should not include sensitive personal identifiers unless absolutely necessary.
+\end{itemize}
+
+
 \end{document}

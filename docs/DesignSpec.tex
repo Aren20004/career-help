@@ -46,4 +46,38 @@ Planned dependencies:
     \item Expose port 5000
 \end{itemize}
 
+
+\section{Snapshot 2 Design: AI Career Roadmap Generator}
+
+\subsection{Chatbot Interaction Design}
+The primary entry point for the new feature is the chatbot-style UI. The following interaction pattern is expected:
+
+\begin{itemize}
+    \item The user types a natural language request for a career roadmap.
+    \item The UI displays the user message in the conversation history.
+    \item The frontend sends the message and any structured form data to the backend API.
+    \item The UI displays a loading indicator while the roadmap is generated.
+    \item The final roadmap is rendered as a series of sections or bullet lists within the chat window.
+\end{itemize}
+
+\subsection{Backend Endpoint Specification}
+A new backend endpoint is defined conceptually as:
+
+\begin{itemize}
+    \item \textbf{Method:} POST
+    \item \textbf{Path:} \texttt{/career-roadmap}
+    \item \textbf{Request Body:} JSON containing major, interests, experience level, and target career goal.
+    \item \textbf{Response:} JSON structure including one or more phases, each with recommended actions.
+\end{itemize}
+
+\subsection{Integration with Existing Components}
+The Career Roadmap Generator reuses and extends the planned recommendation engine by:
+
+\begin{itemize}
+    \item Adding AI-generated narrative guidance on top of static recommendations.
+    \item Allowing the same data layer (for example, predefined careers or skills) to be referenced in the AI prompts.
+    \item Keeping the design flexible enough to plug in future features like class schedule search or live internship feeds.
+\end{itemize}
+
+
 \end{document}
