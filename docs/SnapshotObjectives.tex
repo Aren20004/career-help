@@ -36,4 +36,37 @@ The system architecture, goals, and initial design decisions are defined here.
     A high-level depiction showing user input flowing through the UI, backend recommendation logic, data retrieval, and final results displayed to the user.
 \end{itemize}
 
+
+\section*{Snapshot 2 --- First Checkpoint Objectives}
+
+\subsection*{Reflection on Snapshot 1}
+Snapshot 1 focused on setting up the foundation of the Career Help Platform. 
+The team created the initial versions of the SRS, SDD, User Manual, and Design Specification, 
+and defined the overall problem space: helping students explore careers and understand the paths required to reach them. 
+At this stage, the chatbot, AI logic, and dynamic roadmap generation were still in the planning phase.
+
+\subsection*{New Objective: AI-Powered Career Roadmap Generator for Students}
+Snapshot 2 introduces the first major functional feature of the system: an AI-powered career roadmap generator 
+targeted specifically at students. The feature will provide structured multi-step guidance to help students move from 
+their current academic status toward their desired career.
+
+\subsection*{Goals for Snapshot 2}
+\begin{itemize}
+    \item Implement a new backend service that accepts student inputs such as major, interests, experience level, and target career goal.
+    \item Integrate an AI model or external API capable of generating a multi-year roadmap with clear milestones.
+    \item Extend the chatbot interface so students can request a ``career roadmap'' using natural language.
+    \item Include recommendations for relevant classes, internships, projects, and skills that support the student\'s target career.
+    \item Ensure responses are formatted in phases (for example, Year 1--4 or Semester 1--8) to help students plan over time.
+    \item Lay the groundwork for future extensions such as class schedule lookup and internship search integration.
+\end{itemize}
+
+\subsection*{Deliverables for Snapshot 2}
+\begin{itemize}
+    \item Updated SRS, SDD, User Manual, and Design Specification including the career roadmap generator feature.
+    \item Updated workflow diagram showing the new AI roadmap component integrated with the chatbot.
+    \item Backend endpoint stubbed or implemented for generating roadmaps.
+    \item Basic test cases documented in TestRail for roadmap requests, validation, and error handling.
+\end{itemize}
+
+
 \end{document}
