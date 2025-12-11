@@ -96,3 +96,85 @@ The chatbot accepts internship-specific queries and displays results in structur
 Internship module integrates with intent router and may leverage roadmap data.
 
 \end{document}
+
+\section{Snapshot 4 Design: Final Refinements and System Completion}
+
+Snapshot 4 focuses on finalizing the Career Help Platform for delivery. 
+Rather than introducing new features, this phase ensures that the UI, backend services, 
+and supporting documentation are consistent, stable, and aligned with the project’s intended functionality.
+
+\subsection{UI/UX Refinements}
+Several design updates were made to improve clarity, readability, and consistency across the platform:
+
+\begin{itemize}
+    \item Standardized spacing, typography, and component sizing across all pages.
+    \item Improved layout structure for roadmap and internship results (card-based formatting).
+    \item Updated chatbot message bubbles for clearer distinction between user and system messages.
+    \item Ensured consistent styling for certificate, internship, and job lists.
+    \item Added responsive design adjustments for smaller screens.
+\end{itemize}
+
+\subsection{Navigation and Page Structure Updates}
+Snapshot 4 finalizes the system’s page-level design with the following improvements:
+
+\begin{itemize}
+    \item Streamlined top-level navigation for Roadmaps, Internships, Certificates, and Jobs.
+    \item Updated routing configurations to reduce unnecessary page reloads.
+    \item Ensured that each feature is reachable within two clicks or fewer.
+\end{itemize}
+
+\subsection{Backend Design Stabilization}
+No new backend modules were introduced during Snapshot 4; however, several improvements were finalized:
+
+\begin{itemize}
+    \item Cleanup of unused parameters and draft endpoints left from early snapshots.
+    \item Standardized API response formats across all services (roadmaps, internships, certificates).
+    \item Added error-handling patterns to support invalid or incomplete chatbot requests.
+    \item Ensured that both roadmap and internship modules return structured JSON compatible with shared UI components.
+\end{itemize}
+
+\subsection{Workflow and System Diagram Updates}
+Snapshot 4 includes updates to the workflow to reflect the final system state:
+
+\begin{enumerate}
+    \item The user interacts through a React-powered UI or chatbot interface.
+    \item The frontend sends structured or natural language input to the backend.
+    \item The backend routes the request to either the Career Roadmap Service or Internship Guidance Module.
+    \item Services retrieve or generate data and return structured JSON responses.
+    \item The UI renders results using unified card layouts and sectioned responses.
+\end{enumerate}
+
+\subsection{Final Component Summary}
+At the completion of Snapshot 4, the full system design includes:
+
+\begin{itemize}
+    \item \textbf{Chatbot UI:} Central interaction method supporting roadmap and internship queries.
+    \item \textbf{Career Roadmap Generator:} Provides phase-based academic and skill guidance.
+    \item \textbf{Internship Opportunities Module:} Supplies internship listings and application strategies.
+    \item \textbf{Certificate Exploration:} Lists recommended certifications tied to career paths.
+    \item \textbf{Job Overview:} Displays example entry-level jobs aligned with selected fields.
+    \item \textbf{Unified Data Layer:} Centralized source of career, internship, and certification information.
+\end{itemize}
+
+\subsection{Deployment and Docker Integration}
+Snapshot 4 introduces finalized deployment support:
+
+\begin{itemize}
+    \item A \texttt{docker-compose.yml} file defining services for frontend, backend, and database.
+    \item Consistent environment variable usage for API services.
+    \item Stable container networking allowing seamless UI–API–database communication.
+\end{itemize}
+
+\subsection{Testing and Stability Considerations}
+Design updates include support for complete system testing:
+
+\begin{itemize}
+    \item TestRail Snapshot 4 regression testing validates roadmap generation, internship guidance, and UI workflows.
+    \item Error messages, loading indicators, and fallback responses were refined to ensure usability.
+    \item All major components now produce deterministic and readable output.
+\end{itemize}
+
+\section*{Snapshot 4 Summary}
+The final design delivers a polished, user-friendly experience with clear workflows, responsive components, 
+and a fully documented system architecture suitable for future enhancements or deployment.
+
