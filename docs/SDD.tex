@@ -147,3 +147,90 @@ This module enables internship discovery and tailored application support.
 \end{enumerate}
 
 \end{document}
+
+% ------------------------ Snapshot 4 Design ------------------------
+\section{Snapshot 4 Final Design Additions}
+
+Snapshot 4 does not introduce major new modules; instead it finalizes the system by ensuring consistency, stability, documentation completeness, and accurate deployment support.
+
+\subsection{Final Architecture Overview}
+The final system architecture now includes:
+\begin{itemize}
+    \item React-based UI components for roadmaps, internships, certificates, and jobs.
+    \item Node.js/Express backend providing unified REST API endpoints.
+    \item MongoDB storage (or JSON dataset layer during development).
+    \item A chatbot-style interaction flow for roadmap and internship guidance.
+    \item Docker containerization for frontend, backend, and database.
+\end{itemize}
+
+\subsection{Final Workflow (Snapshot 4)}
+Final workflow from user request to response:
+
+\begin{enumerate}
+    \item User interacts with the React frontend or chatbot UI.
+    \item Frontend sends a structured request to the Express backend.
+    \item Backend routes request to Roadmap Service or Internship Module.
+    \item Modules fetch or generate relevant data.
+    \item Backend returns JSON formatted results.
+    \item Frontend renders roadmap phases, internships, or certificates.
+\end{enumerate}
+
+\subsection{UI/UX Refinements}
+Final design refinements introduced during Snapshot 4 include:
+\begin{itemize}
+    \item Cleaner spacing and styling across all pages.
+    \item Unified card components for internships, certificates, and jobs.
+    \item Improved chatbot message bubble formatting.
+    \item Mobile-friendly layout adjustments.
+\end{itemize}
+
+\subsection{Deployment and Infrastructure}
+Snapshot 4 adds complete deployment support:
+\begin{itemize}
+    \item \texttt{docker-compose.yml} connecting frontend, backend, and database.
+    \item Standardized environment variable usage for backend services.
+    \item Build system prepared for containerized deployment.
+\end{itemize}
+
+\subsection{Testing and Validation Integration}
+The design now incorporates a final testing layer:
+\begin{itemize}
+    \item TestRail Snapshot 4 run ensures all major functionality behaves as expected.
+    \item Workflow was updated to include test validation stages.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section{User Interface (Updated)}
+% ---------------------------------------------------------
+
+\begin{itemize}
+    \item \textbf{Home Page}: Overview of platform and navigation links.
+    \item \textbf{Career Roadmap Page}: Form inputs + roadmap output.
+    \item \textbf{Internship Page}: Opportunities + guidance text.
+    \item \textbf{Certificates Page}: Display of certificate programs.
+    \item \textbf{Jobs Page}: Overview of job categories and examples.
+    \item \textbf{Chatbot Interface}: Natural language queries for roadmap and internship assistance.
+\end{itemize}
+
+UI improvements in Snapshot 4:
+\begin{itemize}
+    \item Consistent typography and color usage.
+    \item Responsive layout improvements.
+    \item Updated components for better readability.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section{Glossary}
+% ---------------------------------------------------------
+
+\begin{longtable}{|c|p{10cm}|}
+\hline
+Term & Definition \\ \hline
+Career Path & A structured journey toward a target profession. \\ \hline
+Recommendation Engine & Component that returns resources associated with a selected career. \\ \hline
+Roadmap Service & Backend module that generates multi-phase academic/career roadmaps. \\ \hline
+Internship Service & Module responsible for retrieving internship matches and generating guidance. \\ \hline
+Chatbot Orchestrator & Backend logic that routes natural language requests to appropriate modules. \\ \hline
+\end{longtable}
+
+\end{document}
