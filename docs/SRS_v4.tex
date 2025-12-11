@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+
+\title{Software Requirements Specification (SRS) \\ Version 4.0 \\ Career Help Platform}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Version Table}
+\begin{tabular}{|c|p{8cm}|c|}
+\hline
+Version & Description & Date \\ \hline
+1.0 & Initial requirements defined for core platform & -- \\ \hline
+2.0 & Requirements for AI Career Roadmap Generator added & -- \\ \hline
+3.0 & Requirements for Internship Opportunities and Guidance added & -- \\ \hline
+4.0 & Final requirement updates and clean up (Snapshot 4) & -- \\ \hline
+\end{tabular}
+
+\section{Introduction}
+\subsection{Purpose}
+This SRS describes the final functional and non-functional requirements for the Career Help Platform.
+
+\subsection{Intended Audience}
+Developers, testers, instructors, and stakeholders involved in evaluating or maintaining the project.
+
+\subsection{Overview}
+The system supports:
+\begin{itemize}
+    \item Career roadmap generation.
+    \item Internship discovery and guidance.
+    \item Certificate and job exploration.
+\end{itemize}
+
+\section{External Interface Requirements}
+\subsection{User Interface}
+\begin{itemize}
+    \item The user interacts with a responsive web UI.
+    \item Key pages: home, career roadmap, internships, certificates, jobs.
+    \item Information is shown using cards, lists, and simple forms.
+\end{itemize}
+
+\subsection{Software Interfaces}
+\begin{itemize}
+    \item React frontend communicates with Express backend via REST APIs.
+    \item Backend connects to MongoDB database.
+    \item Optionally, external APIs may be used for jobs/internships in future versions.
+\end{itemize}
+
+\section{Functional Requirements}
+\subsection{Career Roadmap}
+\begin{itemize}
+    \item FR-CR1: System must accept inputs such as major, interests, and target role.
+    \item FR-CR2: System must return a multi-step roadmap with milestones.
+\end{itemize}
+
+\subsection{Internship Opportunities}
+\begin{itemize}
+    \item FR-INT1: System must allow users to browse internship options.
+    \item FR-INT2: System must display basic information (title, location, area).
+    \item FR-INT3: System must provide guidance text for applications.
+\end{itemize}
+
+\section{Legal and Ethical Considerations}
+\begin{itemize}
+    \item The platform should avoid storing highly sensitive personal data.
+    \item Recommendations should not be biased toward specific institutions or employers without justification.
+    \item Any external data sources must comply with their respective terms of use.
+\end{itemize}
+
+\section{Future Requirements}
+Possible future requirements include:
+\begin{itemize}
+    \item Authentication and personalized profiles.
+    \item Role-based dashboards.
+    \item Deeper integration with external job APIs.
+\end{itemize}
+
+\end{document}
