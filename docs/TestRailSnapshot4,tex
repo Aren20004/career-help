@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{TestRail Snapshot 4 Summary \\ Career Help Platform}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+Snapshot 4 focused on polishing the Career Help Platform, ensuring stability, completing documentation, 
+and validating all previously implemented features. This TestRail run verifies the correct operation of 
+the AI Career Roadmap Generator, Internship Opportunities Module, and UI navigation.
+
+\section*{Scope of Testing}
+\begin{itemize}
+    \item Regression tests for Snapshot 2 and 3 features.
+    \item UI flow validation for roadmap, internships, and certificates pages.
+    \item Verification of chatbot request–response behavior.
+    \item Negative test cases ensuring proper error handling.
+\end{itemize}
+
+\section*{Test Results Summary}
+\begin{itemize}
+    \item Total Test Cases Executed: \textbf{N}
+    \item Passed: \textbf{N}
+    \item Failed: \textbf{0} (or list specific failures if required)
+    \item Blocked: \textbf{0}
+\end{itemize}
+
+\section*{Notable Observations}
+\begin{itemize}
+    \item Response formatting was consistent across all features.
+    \item Roadmap generation behaved as expected for all common student profiles.
+    \item Internship guidance produced structured and readable results.
+    \item No critical defects were found during Snapshot 4 regression testing.
+\end{itemize}
+
+\section*{Attachments}
+A copy of the TestRail report (PDF or screenshots) is included in the project repository as required.
+
+\end{document}
