@@ -1,0 +1,150 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Career Help Project -- Jira Overview}}\\[0.5em]
+    {\large Bug Tracker (CH) \& Scrum Board (CHS)}\\[1em]
+    \today
+\end{center}
+
+\section{Jira Project Links}
+
+\subsection{Bug Tracker (Project CH)}
+This Jira view is used as the main bug tracker for the project.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Project key:} CH
+    \item \textbf{Description:} Central place to report, track, and prioritize bugs.
+    \item \textbf{Jira link:}\\
+    \url{https://cs3338-career-help-project.atlassian.net/jira/software/c/projects/CH/list?jql=project%20%3D%20%22CH%22%20ORDER%20BY%20created%20DES}
+\end{itemize}
+
+\subsection{Scrum Board (Project CHS)}
+This Jira board is used to track work in sprints for the Career Help system.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Project key:} CHS
+    \item \textbf{Description:} Scrum board for tracking sprint work, including stories, tasks, and bugs.
+    \item \textbf{Jira board link:}\\
+    \url{https://cs3338-career-help-project.atlassian.net/jira/software/projects/CHS/boards/166?sprintStarted=true}
+\end{itemize}
+
+\section{Bug Tracker Structure (CH)}
+
+This section describes how bugs in the \textbf{CH} project are typically organized. You can adjust this text and the tables below to match your actual workflow.
+
+\subsection{Recommended Bug Fields}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Issue Key}: Jira-generated ID (e.g., CH-101)
+    \item \textbf{Summary}: Short description of the bug
+    \item \textbf{Status}: e.g., Open, In Progress, In Review, Done
+    \item \textbf{Priority}: e.g., Critical, High, Medium, Low
+    \item \textbf{Assignee}: Person responsible for fixing the bug
+    \item \textbf{Reporter}: Person who reported the bug
+    \item \textbf{Created / Updated}: Timestamps for lifecycle tracking
+    \item \textbf{Sprint / Fix Version}: If the bug is tied to a sprint or release
+\end{itemize}
+
+\subsection{Sample Bug List (to be filled in manually)}
+
+\setlength{\extrarowheight}{2pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{1.8cm}
+                  >{\raggedright\arraybackslash}p{5.2cm}
+                  >{\raggedright\arraybackslash}p{1.7cm}
+                  >{\raggedright\arraybackslash}p{1.7cm}
+                  >{\raggedright\arraybackslash}p{2cm}
+                  >{\raggedright\arraybackslash}p{2.4cm}}
+\toprule
+\textbf{Issue Key} & \textbf{Summary} & \textbf{Status} & \textbf{Priority} & \textbf{Assignee} & \textbf{Created (Date)} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Issue Key} & \textbf{Summary} & \textbf{Status} & \textbf{Priority} & \textbf{Assignee} & \textbf{Created (Date)} \\
+\midrule
+\endhead
+
+CH-001 & Example bug: Login button unresponsive on homepage & Open & High & Unassigned & 2025-01-01 \\
+CH-002 & Example bug: Error message not shown for invalid password & In Progress & Medium & Student A & 2025-01-02 \\
+CH-003 & Example bug: Profile picture upload fails on mobile & In Review & High & Student B & 2025-01-03 \\
+CH-004 & Example bug: Resume download link broken & Done & Critical & Student C & 2025-01-04 \\
+
+\bottomrule
+\end{longtable}
+
+\section{Scrum Board Structure (CHS)}
+
+This section describes how the \textbf{CHS} scrum board might be structured around sprints.
+
+\subsection{Typical Columns}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Backlog}
+    \item \textbf{To Do}
+    \item \textbf{In Progress}
+    \item \textbf{In Review / Testing}
+    \item \textbf{Done}
+\end{itemize}
+
+\subsection{Sprint Overview Template}
+
+You can duplicate the structure below for each sprint in the CHS board.
+
+\subsubsection*{Sprint Name: \textit{Sprint 1 -- Example}}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Sprint Goal:} Describe the main objective of the sprint.
+    \item \textbf{Start Date:} YYYY-MM-DD
+    \item \textbf{End Date:} YYYY-MM-DD
+    \item \textbf{Total Issues:} X
+    \item \textbf{Completed Issues:} Y
+    \item \textbf{Velocity (Story Points):} Z
+\end{itemize}
+
+\subsection{Sample Sprint Issue Table}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{1.8cm}
+                  >{\raggedright\arraybackslash}p{5.2cm}
+                  >{\raggedright\arraybackslash}p{2cm}
+                  >{\raggedright\arraybackslash}p{1.8cm}
+                  >{\raggedright\arraybackslash}p{2cm}}
+\toprule
+\textbf{Issue Key} & \textbf{Summary} & \textbf{Issue Type} & \textbf{Status} & \textbf{Story Points} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Issue Key} & \textbf{Summary} & \textbf{Issue Type} & \textbf{Status} & \textbf{Story Points} \\
+\midrule
+\endhead
+
+CHS-001 & Example story: As a user, I can create an account & Story & Done & 3 \\
+CHS-002 & Example task: Implement email verification & Task & In Progress & 5 \\
+CHS-003 & Example bug: Verification email not sent & Bug & To Do & 2 \\
+CHS-004 & Example story: As a user, I can upload my resume & Story & Done & 5 \\
+
+\bottomrule
+\end{longtable}
+
+\section{Notes and Next Steps}
+
+\begin{itemize}[leftmargin=*]
+    \item Replace the example issues with real data from Jira (export as CSV or copy-paste).
+    \item You can duplicate the bug and sprint tables for multiple releases/sprints.
+    \item Consider adding sections for ``Retrospective'', ``Risks'', and ``Action Items'' if this document is used as a formal report.
+\end{itemize}
+
+\end{document}
